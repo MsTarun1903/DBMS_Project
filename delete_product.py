@@ -62,8 +62,11 @@ def display_products_gui():
 root = tk.Tk()
 root.geometry("500x500")
 
-delete_product_button = tk.Button(root, text="Delete product", command=delete_product_gui)
-display_products_button = tk.Button(root, text="Display products", command=display_products_gui)
+title_label = tk.Label(root, text="DELETE PRODUCT", font=("Arial", 20))
+title_label.pack(pady=10)
+
+delete_product_button = tk.Button(root, text="Delete product", command=delete_product_gui,bg="red",fg="white")
+display_products_button = tk.Button(root, text="Display products", command=display_products_gui,bg="green",fg="white")
 
 delete_product_button.pack()
 display_products_button.pack()
