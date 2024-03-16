@@ -53,6 +53,7 @@ def add_product_gui():
     window = tk.Toplevel(root)
     window.title("Add product")
     window.geometry("500x500")
+    window.configure(bg="light blue")
 
     name_label = tk.Label(window, text="Name")
     name_entry = tk.Entry(window)
@@ -150,15 +151,20 @@ def display_products_gui():
 root = tk.Tk()
 root.geometry("500x500")
 
-add_product_button = tk.Button(root, text="Add product", command=add_product_gui)
-update_product_button = tk.Button(root, text="Update product", command=update_product_gui)
-delete_product_button = tk.Button(root, text="Delete product", command=delete_product_gui)
-display_products_button = tk.Button(root, text="Display products", command=display_products_gui)
+title_label = tk.Label(root, text="INVENTORY MANAGEMENT SYSTEM", font=("Arial", 20))
+title_label.pack(pady=10)
 
-add_product_button.pack()
-update_product_button.pack()
-delete_product_button.pack()
-display_products_button.pack()
+add_product_button = tk.Button(root, text="Add product", command=add_product_gui, bg='light blue', fg='black')
+update_product_button = tk.Button(root, text="Update product", command=update_product_gui, bg='light green', fg='black')
+delete_product_button = tk.Button(root, text="Delete product", command=delete_product_gui, bg='light yellow', fg='black')
+display_products_button = tk.Button(root, text="Display products", command=display_products_gui, bg='light gray', fg='black')
+
+add_product_button.pack(pady=10)
+update_product_button.pack(pady=10)
+delete_product_button.pack(pady=10)
+display_products_button.pack(pady=10)
+
+
 
 root.mainloop()
 
