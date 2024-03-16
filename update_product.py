@@ -81,8 +81,11 @@ def display_products_gui():
 root = tk.Tk()
 root.geometry("500x500")
 
-update_product_button = tk.Button(root, text="Update product", command=update_product_gui)
-display_products_button = tk.Button(root, text="Display products", command=display_products_gui)
+title_label = tk.Label(root, text="UPDATE PRODUCT", font=("Arial", 20))
+title_label.pack(pady=10)
+
+update_product_button = tk.Button(root, text="Update product", command=update_product_gui, bg="yellow", fg="black")
+display_products_button = tk.Button(root, text="Display products", command=display_products_gui, bg="light green", fg="black")
 
 update_product_button.pack()
 display_products_button.pack()
