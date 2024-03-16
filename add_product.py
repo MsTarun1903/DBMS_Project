@@ -3,7 +3,7 @@ from prettytable import PrettyTable
 import tkinter as tk
 from tkinter import messagebox
 
-db = mysql.connector(
+db = mysql.connector.connect(
     host="localhost",
     user="root",
     password="Tarun@123",
@@ -77,8 +77,11 @@ def display_products_gui():
 root = tk.Tk()
 root.geometry("500x500")
 
-add_product_button = tk.Button(root, text="Add product", command=add_product_gui)
-display_products_button = tk.Button(root, text="Display products", command=display_products_gui)
+title_label = tk.Label(root, text="ADD PRODUCT", font=("Arial", 20))
+title_label.pack(pady=10)
+
+add_product_button = tk.Button(root, text="Add product", command=add_product_gui,bg="light blue",fg="black")
+display_products_button = tk.Button(root, text="Display products", command=display_products_gui,bg="light green",fg="black")
 
 add_product_button.pack()
 display_products_button.pack()
